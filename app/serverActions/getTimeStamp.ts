@@ -1,6 +1,6 @@
 "use server";
 
-export async function getTimeStamp(hash: number) {
+export async function getTimeStamp(hash: string) {
   try {
     // console.log("hash: ", hash);
     const response = await fetch(`https://blockstream.info/api/block/${hash}`);
@@ -21,6 +21,6 @@ export async function getTimeStamp(hash: number) {
     return blockDetailsJSON.timestamp;
     // console.log("chunks: ", chunks);
   } catch (error) {
-    throw new Error(error);
+    throw new Error(error as string);
   }
 }

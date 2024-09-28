@@ -25,10 +25,6 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <ul>
-        Questions:
-        <li>Can we ignore Hash? It looks ugly</li>
-      </ul>
       {blockArray.map((block) => (
         <ul key={block}>
           <li>Block: {block}</li>
